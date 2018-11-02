@@ -1,0 +1,47 @@
+@import './fonts.scss';
+@import './extend.scss';
+
+.pmr-editor {
+  position: relative;
+  padding-top: 40px;
+  border: 1px solid rgba(0,0,0,.2);
+
+  img.ProseMirror-selectednode {
+    outline: 2px solid #8cf;
+  }
+}
+
+.pmr-clearfix {
+  @extend %clearfix;
+}
+
+.pmr-size {
+  padding-top: 10px;
+}
+
+.pmr-toolbar,
+.pmr-textarea {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  h1 { font-size: 30px; }
+
+  h2 { font-size: 20px; }
+
+  h3 { font-size: 18px; }
+
+  h4 { font-size: 16px; }
+
+  h5 { font-size: 14px; }
+
+  h6 { font-size: 12px; }
+}
+
+@import './toolbar.scss';
+@import './dropdown.scss';
+@import './anthems.scss';
+@import './panel.scss';
+@import './alert.scss';
+@import './textarea.scss';

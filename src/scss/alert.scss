@@ -1,0 +1,60 @@
+blockquote[class*="pmrico-"] {
+  position: relative;
+  margin: 10px 0;
+  padding: 8px 8px 8px 40px;
+  border: none;
+  line-height: 24px;
+  border-radius: 3px;
+
+  p, ul, ol, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  &:before {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+blockquote {
+  &.pmrico-info {
+    background: rgb(222, 235, 255);
+  }
+
+  &.pmrico-success {
+    background: rgb(227, 252, 239);
+  }
+
+  &.pmrico-note {
+    background: rgb(234, 230, 255);
+  }
+
+  &.pmrico-warning {
+    background: rgb(255, 250, 230);
+  }
+
+  &.pmrico-error {
+    background: rgb(255, 235, 230);
+  }
+}
+
+.pmrico-info:before {
+  color: rgb(0, 82, 204);
+}
+.pmrico-success:before {
+  color: rgb(0, 135, 90);
+}
+.pmrico-note:before {
+  color: rgb(82, 67, 170)
+}
+.pmrico-warning:before {
+  color: rgb(255, 153, 31);
+}
+.pmrico-error:before {
+  color: rgb(222, 53, 11);
+}

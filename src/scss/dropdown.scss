@@ -1,0 +1,44 @@
+.pmr-dropdown {
+  &.pmr-hover,
+  &:hover {
+    @extend %hover;
+  }
+
+  &:hover .pmr-dropdown__content {
+    @extend %layer-open;
+  }
+
+  &__content {
+    margin-top: 4px;
+    min-width: 100%;
+    cursor: default;
+    @extend %layer;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 4px 15px 5px rgba(0,0,0,.2);
+
+    &:before {
+      content: "";
+      top: -5px;
+      background: #fff;
+      @extend %arrow;
+    }
+  }
+
+  .pmr-dropdown__content {
+    z-index: 100;
+  }
+}
+
+.pmr-panel-contain.pmr-hover {
+  @extend %hover;
+
+  .pmr-dropdown__content {
+    @extend %layer-open;
+  }
+}

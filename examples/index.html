@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <title>Pmr Editor</title>
+  <link rel="stylesheet" href="https://web.rrzuzu.com/WebStatic/mjsuo/static/css/common.min.css?version=357">
+  <link rel="stylesheet" href="./dist/pmr-editor.css">
+  <style>
+    .demo-container {
+      width: 900px;
+      margin: 50px auto;
+      background: #fff;
+    }
+    
+
+    .pmr-editor {
+      height: 302px;
+      /* width: 600px; */
+    }
+    
+    .pmr-size {
+      margin-bottom: 20px;
+    }
+
+    .proseMirror-container {
+      position: relative;
+    }
+
+    .pmr-emoji-words {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <div class="proseMirror-container">
+      <div class="hide"><textarea class="pmr-editor__values" name=""></textarea></div>
+
+      <section class="pmr-editor">
+        <article class="pmr-toolbar pmr-clearfix">
+          <div class="pmrico-bold"><i class="pmr-mele__badge">加粗</i></div>
+          <div class="pmrico-italic"><i class="pmr-mele__badge">斜体</i></div>
+          <div class="pmrico-font pmr-dropdown"><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-underline"><i class="pmr-mele__badge">下划线</i></div>
+          <div class="pmrico-strikethrough"><i class="pmr-mele__badge">删除线</i></div>
+  
+          <div class="pmrico-link pmr-panel-contain"><i class="pmr-mele__badge">链接</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-header pmr-dropdown"><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-infos pmr-panel-contain"><i class="pmr-mele__badge">面板</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-list2 pmr-dropdown"><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-quotes-left"><i class="pmr-mele__badge">引用</i></div>
+  
+          <div class="pmrico-happy pmr-panel-contain"><i class="pmr-mele__badge">表情</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-image pmr-panel-contain"><i class="pmr-mele__badge">图片</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-undo pmr-disabled"><i class="pmr-mele__badge">撤销</i></div>
+          <div class="pmrico-redo pmr-disabled"><i class="pmr-mele__badge">恢复</i></div>
+        </article>
+      </section>
+
+      <!-- 字数限制在2115/2000字以内，服务器可能拒绝保存！ -->
+      <!-- 字数限制在0/2000字以内 -->
+      <section class="pmr-size pmr-editor__size">&nbsp;</section>
+
+      <section class="hide pmr-editor__content">
+        <h3>Simple editor</h3>
+        <p>With a very crude menu bar.<img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/laugh.gif" alt="[哈哈]"><img src="https://web.rrzuzu.com/WebStatic/mjsuo/emotions/angrya_thumb.gif" alt="[怒]"></p>
+        <p>
+          <del>deldele</del>
+          <ins>insinsinsins</ins>
+          <span style="text-decoration: line-through;">text-decoration: line-through;</span>
+          <s>ssssssssssss</s>
+        </p>
+      </section>
+    </div>
+
+    <div><input type="text" value=""></div>
+  </div>
+
+  <div><hr></div>
+  
+  <div class="demo-container">
+    <div class="proseMirror-container">
+      <div class="hide"><textarea class="pmr-editor__values" name=""></textarea></div>
+
+      <section class="pmr-editor" style="width: 600px;">
+        <article class="pmr-toolbar pmr-clearfix">
+          <div class="pmrico-bold"><i class="pmr-mele__badge">加粗</i></div>
+          <div class="pmrico-italic"><i class="pmr-mele__badge">斜体</i></div>
+          <div class="pmrico-font pmr-dropdown"><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-underline"><i class="pmr-mele__badge">下划线</i></div>
+          <div class="pmrico-strikethrough"><i class="pmr-mele__badge">删除线</i></div>
+  
+          <div class="pmrico-link pmr-panel-contain"><i class="pmr-mele__badge">链接</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-header pmr-dropdown"><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-infos pmr-panel-contain"><i class="pmr-mele__badge">面板</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-list2 pmr-dropdown"><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-quotes-left"><i class="pmr-mele__badge">引用</i></div>
+  
+          <div class="pmrico-happy pmr-panel-contain"><i class="pmr-mele__badge">表情</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-image pmr-panel-contain"><i class="pmr-mele__badge">图片</i><div class="pmr-dropdown__content"></div></div>
+          <div class="pmrico-undo pmr-disabled"><i class="pmr-mele__badge">撤销</i></div>
+          <div class="pmrico-redo pmr-disabled"><i class="pmr-mele__badge">恢复</i></div>
+        </article>
+      </section>
+
+      <section class="pmr-size pmr-editor__size">&nbsp;</section>
+
+      <section class="hide pmr-editor__content">
+        <p><a href="11">11111111</a></p>
+        <p><a href="11">11111111</a></p>
+        <p><a href="11">11111111</a></p>
+        <p><a href="222222">222222222</a></p>
+        <p><a href="222222">222222222</a></p>
+        <p><a href="222222">222222222</a></p>
+        <p><a href="222222">222222222</a></p>
+        <p><a href="222222">222222222</a></p>
+        <p><a href="222222">222222222</a></p>
+        <p><a href="222222">222222222</a><br></p>
+      </section>
+    </div>
+  </div>
+
+  <div class="demo-container">
+    <blockquote class="pmrico-info"><p>info</p></blockquote>
+    <blockquote class="pmrico-success"><p>success</p></blockquote>
+    <blockquote class="pmrico-note"><p>note</p></blockquote>
+    <blockquote class="pmrico-warning"><p>warning</p></blockquote>
+    <blockquote class="pmrico-error"><p>error</p></blockquote>
+    <blockquote class="pmrico-remove"><p>remove</p></blockquote>
+  </div>
+
+  <textarea id="iu" class="hide" rows="10" cols="5">
+    trPastedHTML(html = '') {
+      // 去除表格，word 文档格式
+      html = html.replace(/<\/?(table|thead|tbody|tfoot|tr|td|th)[^>]*>|<o:p>[^<>]*<\/o:p>/gi, '');
+      // 去除空标签
+      html = html.replace(/<([a-z]+)[^>]*>(&nbsp;)?<\/\1>/ig, '');
+      html = html.replace(/<(p|div)[^>]*><\/\1>/gi, '');
+  
+      // 去除两边无用的html，我把这个放以上的前面 ie不知道为何会卡一会
+      html = html.replace(/[\s\S]*<!--StartFragment-->|<!--EndFragment-->[\s\S]*/gi, '');
+  
+      if (!this.notLimit) {
+        const emojMatch = html.match(emojiReg);
+        const imagesMatch = html.match(imagesReg);
+        const linksMatch = html.match(linkReg);
+  
+        if (!!emojMatch) {
+          console.log(html);
+          html = this.transformPasteData(html, emojiReg, 'emoj');
+        }
+  
+        if (!!imagesMatch) {
+          html = this.transformPasteData(html, imagesReg, 'image');
+        }
+  
+        if (!!linksMatch) {
+          html = this.transformPasteData(html, linkReg, 'link');
+        }
+      }
+  
+      return html;
+    }
+  
+    transformPasteData(html, reg, acc) {
+      const acc$ = acc + '$';
+      this[acc$] = 0;
+  
+      html = html.replace(reg, data => {
+        if (this[acc$] >= this[`${acc}Max`] - this[`${acc}Count`]) {
+          return acc === 'link' ? data.replace(/<(\/)?a[^<>]*>/gi, '') : '';
+        }
+  
+        this[acc$]++;
+        return data;
+      });
+  
+      return html;
+    }
+  </textarea>
+  
+  <script src="./dist/pmr-editor.umd.js"></script>
+  <script>
+    (function () {
+      // 这里限制 section标签布局，有时候内容 div标签没有结束标签，导致页面布局错乱
+      var selector = 'section.pmr-editor';
+      var proseMirrors = document.querySelectorAll('.proseMirror-container');
+      var PMR = window.PMR;
+
+      proseMirrors.forEach(function (elem) {
+        var target = elem.querySelector(selector);
+        var content = elem.querySelector(selector + '__content');
+        var textarea = elem.querySelector('.pmr-editor__values');
+        var size = elem.querySelector(selector + '__size');
+
+        if (!elem.pmview) {
+          elem.pmview = new PMR.OutletView({
+            target: target,
+            content: content,
+            textarea: textarea,
+            size: size,
+            notLimit: false,
+            alert: function (msg) {
+              window.alert(msg);
+            }
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

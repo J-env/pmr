@@ -1,0 +1,74 @@
+{
+  "name": "pmr-editor",
+  "version": "0.1.0",
+  "description": "pmr-editor",
+  "homepage": "https://github.com/J-env/pmr-editor",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "dev": "rollup -c -w --environment NODE_ENV:development",
+    "build": "npm run clean && rollup -c --environment NODE_ENV:production",
+    "test": "npm run build && mocha",
+    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+  },
+  "dependencies": {
+    "classlist-polyfill": "^1.2.0",
+    "crel": "^3.0.0",
+    "prosemirror-commands": "^1.0.0",
+    "prosemirror-example-setup": "^1.0.0",
+    "prosemirror-gapcursor": "^1.0.0",
+    "prosemirror-history": "^1.0.0",
+    "prosemirror-inputrules": "^1.0.0",
+    "prosemirror-keymap": "^1.0.0",
+    "prosemirror-menu": "^1.0.0",
+    "prosemirror-model": "^1.0.0",
+    "prosemirror-schema-basic": "^1.0.0",
+    "prosemirror-schema-list": "^1.0.0",
+    "prosemirror-state": "^1.0.0",
+    "prosemirror-transform": "^1.0.0",
+    "prosemirror-view": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "6.26.0",
+    "codecov": "^3.1.0",
+    "fs-extra": "^5.0.0",
+    "intelli-espower-loader": "^1.0.1",
+    "jest": "^23.6.0",
+    "jsdoc": "^3.5.5",
+    "jsdoc-to-markdown": "^4.0.1",
+    "livereload": "^0.7.0",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.9.4",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.53.2",
+    "rollup-plugin-babel": "3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-livereload": "^0.6.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-scss": "^0.4.0",
+    "rollup-plugin-serve": "^0.6.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "uglify-es": "^3.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-env/pmr-editor.git"
+  },
+  "keywords": [
+    "editor",
+    "pmr-editor",
+    "rich text"
+  ],
+  "author": "J-env",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J-env/pmr-editor/issues"
+  }
+}
