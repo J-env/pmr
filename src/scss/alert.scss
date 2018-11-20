@@ -1,4 +1,5 @@
-blockquote[class*="pmrico-"] {
+block-alert[class*="pmrico-"] {
+  display: block;
   position: relative;
   margin: 10px 0;
   padding: 8px 8px 8px 40px;
@@ -21,7 +22,7 @@ blockquote[class*="pmrico-"] {
   }
 }
 
-blockquote {
+block-alert {
   &.pmrico-info {
     background: rgb(222, 235, 255);
   }

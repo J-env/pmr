@@ -1,6 +1,6 @@
-import { Schema } from 'prosemirror-model'
-import { addListNodes } from 'prosemirror-schema-list'
-import { schema } from './prosemirror-schema-basic/schema-basic'
+import { Schema } from './prosemirror/prosemirror-model'
+import { addListNodes } from './prosemirror/prosemirror-schema-list'
+import { schema } from './prosemirror/prosemirror-schema-basic'
 
 // 菜单配置
 export const menus = {

@@ -1,4 +1,4 @@
-import { Plugin } from 'prosemirror-state'
+import { Plugin  } from '../prosemirror/prosemirror-state'
 
 import { renderGrouped, createFontMenuItem, wrapItem } from './menu'
 import { PanelTabs } from '../panel'
@@ -46,7 +46,6 @@ class MenuView {
 
     this.panelTabs();
     this.update();
-    console.log(this);
   }
 
   update() {
@@ -177,7 +176,7 @@ class MenuView {
   }
 
   _createColorPanel(menus, marks, dom) {
-    const type = this.options.schema.nodes.blockquote;
+    const type = this.options.schema.nodes.blockAlert;
     let colorsHtml = '';
 
     menus.colors.forEach((color) => {
@@ -430,6 +429,10 @@ export function menuPlugin(options) {
       parentNode.style.cssText += `; padding-top: ${$toolbar.offsetHeight}px;`;
       
       return new MenuView($toolbar, editorView, options);
+    },
+    // 编辑区添加class
+    props: {
+      attributes: { 'class': 'pmr-textarea' }
     }
   });
 }

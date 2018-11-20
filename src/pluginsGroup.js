@@ -1,7 +1,6 @@
-import { history } from 'prosemirror-history'
-import { baseKeymap } from 'prosemirror-commands'
-import { keymap } from 'prosemirror-keymap'
-import { Plugin } from 'prosemirror-state'
+import { history } from './prosemirror/prosemirror-history'
+import { baseKeymap } from './prosemirror/prosemirror-commands'
+import { keymap } from './prosemirror/prosemirror-keymap'
 
 import { menuPlugin } from './menu/view'
 import { buildKeymap } from './keymap'
@@ -24,12 +23,6 @@ export function pluginsGroup(options = {}) {
       schema,
       outlet
     }),
-    // 编辑区添加class
-    new Plugin({
-      props: {
-        attributes: { 'class': 'pmr-textarea' }
-      }
-    })
   ];
   
   return plugins;

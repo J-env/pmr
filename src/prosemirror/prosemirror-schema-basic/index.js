@@ -1,6 +1,5 @@
-import { Schema } from "prosemirror-model"
+import { Schema } from '../prosemirror-model'
 
-// :: Object
 // [Specs](#model.NodeSpec) for the nodes defined in this schema.
 export const nodes = {
   // :: NodeSpec The top level document node.
@@ -19,6 +18,18 @@ export const nodes = {
 
   // :: NodeSpec A blockquote (`<blockquote>`) wrapping one or more blocks.
   blockquote: {
+    content: "block+",
+    group: "block",
+    defining: true,
+    parseDOM: [{
+      tag: "blockquote"
+    }],
+    toDOM() {
+      return ["blockquote", 0]
+    }
+  },
+
+  blockAlert: {
     attrs: {
       'class': { default: null }
     },
@@ -27,16 +38,16 @@ export const nodes = {
     defining: false,
     parseDOM: [
       {
-        tag: "blockquote"
+        tag: "block-alert"
       },
       {
-        tag: 'blockquote[class*="pmrico-"]',
+        tag: 'block-alert[class*="pmrico-"]',
         getAttrs: dom => ({
           'class': dom.getAttribute('class') || 'pmrico-info'
         })
       }
     ],
-    toDOM: node => ["blockquote", node.attrs, 0]
+    toDOM: node => ["block-alert", node.attrs, 0]
   },
 
   // :: NodeSpec A horizontal rule (`<hr>`).

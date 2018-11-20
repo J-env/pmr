@@ -552,7 +552,8 @@
   height: 22px !important;
 }
 
-blockquote[class*="pmrico-"] {
+block-alert[class*="pmrico-"] {
+  display: block;
   position: relative;
   margin: 10px 0;
   padding: 8px 8px 8px 40px;
@@ -561,11 +562,11 @@ blockquote[class*="pmrico-"] {
   border-radius: 3px;
 }
 
-blockquote[class*="pmrico-"] p, blockquote[class*="pmrico-"] ul, blockquote[class*="pmrico-"] ol, blockquote[class*="pmrico-"] h1, blockquote[class*="pmrico-"] h2, blockquote[class*="pmrico-"] h3, blockquote[class*="pmrico-"] h4, blockquote[class*="pmrico-"] h5, blockquote[class*="pmrico-"] h6 {
+block-alert[class*="pmrico-"] p, block-alert[class*="pmrico-"] ul, block-alert[class*="pmrico-"] ol, block-alert[class*="pmrico-"] h1, block-alert[class*="pmrico-"] h2, block-alert[class*="pmrico-"] h3, block-alert[class*="pmrico-"] h4, block-alert[class*="pmrico-"] h5, block-alert[class*="pmrico-"] h6 {
   margin: 0;
 }
 
-blockquote[class*="pmrico-"]:before {
+block-alert[class*="pmrico-"]:before {
   position: absolute;
   left: 8px;
   top: 8px;
@@ -575,23 +576,23 @@ blockquote[class*="pmrico-"]:before {
   text-align: center;
 }
 
-blockquote.pmrico-info {
+block-alert.pmrico-info {
   background: #deebff;
 }
 
-blockquote.pmrico-success {
+block-alert.pmrico-success {
   background: #e3fcef;
 }
 
-blockquote.pmrico-note {
+block-alert.pmrico-note {
   background: #eae6ff;
 }
 
-blockquote.pmrico-warning {
+block-alert.pmrico-warning {
   background: #fffae6;
 }
 
-blockquote.pmrico-error {
+block-alert.pmrico-error {
   background: #ffebe6;
 }
 
@@ -651,6 +652,7 @@ blockquote.pmrico-error {
 .pmr-textarea pre,
 .pmr-textarea > div {
   margin: 10px 0;
+  line-height: 1.5;
 }
 
 .pmr-textarea ul, .pmr-textarea ol {
@@ -666,7 +668,7 @@ blockquote.pmrico-error {
   list-style-type: disc;
 }
 
-.pmr-textarea blockquote:not([class]) {
+.pmr-textarea blockquote {
   display: block;
   border-left: 8px solid #d0e5f2;
   padding: 5px 10px;

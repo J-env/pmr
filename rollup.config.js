@@ -47,7 +47,7 @@ const ex = isProd ? [
     output: {
       file: `dist/index.js`,
       format: 'es',
-      name: 'PMR',
+      name: 'OUVI',
       banner: banner,
     },
     plugins: plugins
@@ -59,7 +59,7 @@ const ex = isProd ? [
       format: 'umd',
       // 如果不同时使用 export 与 export default 可打开legacy
       // legacy: true,
-      name: 'PMR',
+      name: 'OUVI',
       banner: banner,
     },
     plugins: [
@@ -76,7 +76,7 @@ const ex = isProd ? [
       format: 'umd',
       // 如果不同时使用 export 与 export default 可打开legacy
       // legacy: true,
-      name: 'PMR',
+      name: 'OUVI',
       banner: banner,
     },
     watch: {

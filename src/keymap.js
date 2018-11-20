@@ -1,7 +1,7 @@
-import { chainCommands, exitCode } from 'prosemirror-commands'
-import { splitListItem, liftListItem, sinkListItem } from 'prosemirror-schema-list'
-import { undo, redo } from 'prosemirror-history'
-import { undoInputRule } from 'prosemirror-inputrules'
+import { chainCommands, exitCode } from './prosemirror/prosemirror-commands'
+import { splitListItem, liftListItem, sinkListItem } from './prosemirror/prosemirror-schema-list'
+import { undo, redo } from './prosemirror/prosemirror-history'
+import { undoInputRule } from './prosemirror/prosemirror-inputrules'
 
 const mac = typeof navigator !== 'undefined' ? /Mac/.test(navigator.platform) : false;
 

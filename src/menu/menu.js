@@ -1,6 +1,6 @@
-import { wrapIn, setBlockType, toggleMark, lift, chainCommands } from 'prosemirror-commands'
-import { undo, redo } from 'prosemirror-history'
-import { wrapInList, liftListItem } from 'prosemirror-schema-list'
+import { wrapIn, setBlockType, toggleMark, lift, chainCommands } from '../prosemirror/prosemirror-commands'
+import { undo, redo } from '../prosemirror/prosemirror-history'
+import { wrapInList, liftListItem } from '../prosemirror/prosemirror-schema-list'
 
 export class MenuItem {
   constructor(spec) {
